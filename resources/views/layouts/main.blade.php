@@ -9,7 +9,7 @@
 </head>
 
 <body class="font-sans text-white bg-gray-900">
-    <nav class="border-b border-gray-500">
+    <nav class="">
         <div class="container flex flex-col items-center justify-between px-4 py-6 mx-auto md:flex-row">
             <ul class="flex flex-col items-center md:flex-row">
                 <li>
