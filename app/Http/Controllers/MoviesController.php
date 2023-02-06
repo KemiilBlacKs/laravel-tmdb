@@ -23,6 +23,7 @@ class MoviesController extends Controller
             ->json()['genres'];
 
         $genres = collect($genresArray)->mapWithKeys(function ($genre) {
+
             return [$genre['id'] => $genre['name']];
         });
 
@@ -60,7 +61,12 @@ class MoviesController extends Controller
      */
     public function show($id)
     {
-        //
+        $movie = Http::withToken(config('services.tmdb.api_key'))
+            ->get(env('TMDB_ENDPOINT').'movie/'.$id.'?append_to_response=credits,videos,images')
+            ->json();
+
+        return view('show')
+            ->with('movie', $movie);
     }
 
     /**

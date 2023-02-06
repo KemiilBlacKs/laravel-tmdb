@@ -1,11 +1,11 @@
 <!-- Order your soul. Reduce your wants. - Augustine -->
 <div class="mt-8">
-    <a href="">
+    <a href="{{ route('movies.show', $movie['id']) }}">
         <img src="{{ env('TMDB_API_IMAGE_URL') }}.{{ $movie['poster_path'] }}" alt="poster"
             class="transition duration-150 ease-in-out rounded-lg hover:opacity-75">
     </a>
     <div class="mt-2">
-        <a href="#" class="mt-2 text-md hover:text-gray-300">
+        <a href="{{ route('movies.show', $movie['id']) }}" class="mt-2 text-md hover:text-gray-300">
             {{-- Vérification de l'existence du titre dans le tableau $movie --}}
             {{-- S'il n'existe pas, utiliser la clé 'name' à la place --}}
             {{ isset($movie['title']) ? $movie['title'] : (isset($movie['name']) ? $movie['name'] : '') }}

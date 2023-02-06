@@ -13,17 +13,17 @@
         <div class="container flex flex-col items-center justify-between px-4 py-6 mx-auto md:flex-row">
             <ul class="flex flex-col items-center md:flex-row">
                 <li>
-                    <a href="#" class="mt-3 text-2xl font-semibold md:mt-0">MovieDB</a>
+                    <a href="{{ route('movies.index') }}" class="mt-3 text-2xl font-semibold md:mt-0">MovieDB</a>
                 </li>
-                <li class="mt-3 md:ml-16 md:mt-0">
+                {{-- <li class="mt-3 md:ml-16 md:mt-0">
                     <a href="#" class="hover:text-gray-300">Movies</a>
-                </li>
+                </-li>
                 <li class="mt-3 md:ml-6 md:mt-0">
                     <a href="#" class="hover:text-gray-300">TV Shows</a>
                 </li>
                 <li class="mt-3 md:ml-6 md:mt-0">
                     <a href="#" class="hover:text-gray-300">Actors</a>
-                </li>
+                </li> --}}
             </ul>
             <div class="mt-3 md:ml-4 md:mt-0">
                 <a href="">
