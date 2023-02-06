@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     @vite('resources/css/app.css')
-    <title>MovieDB</title>
+    <title>{{ config('app.name', 'Laravel') }}</title>
 </head>
 
 <body class="font-sans text-white bg-gray-900">
