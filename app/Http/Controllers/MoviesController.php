@@ -32,6 +32,26 @@ class MoviesController extends Controller
             ->with('genres', $genres);
     }
 
+    public function listingDashboard()
+    {
+        $trendingDay = Http::withToken(config('services.tmdb.api_key'))
+            ->get(env('TMDB_ENDPOINT').'trending/all/day')
+            ->json()['results'];
+
+        $genresArray = Http::withToken(config('services.tmdb.api_key'))
+            ->get(env('TMDB_ENDPOINT').'genre/movie/list')
+            ->json()['genres'];
+
+        $genres = collect($genresArray)->mapWithKeys(function ($genre) {
+
+            return [$genre['id'] => $genre['name']];
+        });
+
+        return view('dashboard')
+            ->with('trendingDay', $trendingDay)
+            ->with('genres', $genres);
+    }
+
     /**
      * Show the form for creating a new resource.
      *
@@ -77,7 +97,13 @@ class MoviesController extends Controller
      */
     public function edit($id)
     {
-        //
+        $movie = Http::withToken(config('services.tmdb.api_key'))
+            ->get(env('TMDB_ENDPOINT').'movie/'.$id.'?append_to_response=credits,videos,images')
+            ->json();
+
+        return view('edit-movie')
+            ->with('movie', $movie);
+
     }
 
     /**
