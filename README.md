@@ -59,3 +59,6 @@ php artisan make:component MovieCard
 ```
 
 I used the [TMDb API](https://developers.themoviedb.org/3/) to get the data of the movies.
+
+I had some problems with the movie listings, some fields like 'title' are replaced by 'name' and 'release_date' by
+'first_air_date'. I put a condition on the view to fix this.
