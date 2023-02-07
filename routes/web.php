@@ -24,4 +24,6 @@ Route::middleware([
 ])->group(function () {
     Route::get('/dashboard', [MoviesController::class, 'listingDashboard'])->name('dashboard');
     Route::get('/dashboard/movies/{movie}', [MoviesController::class, 'edit'])->name('movies.edit');
+    Route::delete('/dashboard/destroy/{movie}', [MoviesController::class, 'destroy'])->name('movies.destroy');
+    Route::get('/dashboard/updateAll', [MoviesController::class, 'fetchAllMovies'])->name('movies.fetchAllMovies');
 });

@@ -8,7 +8,8 @@ It works with Laravel 9, MySQL 8.0 and Docker.
 
 To make the front, I was inspired by the tutorial of :
 
--   [LaravelTuts](https://laraveltuts.com/working-with-tmdb-api-in-laravel-9/)
+-   [Getting started with Laravel 9 and the tmdb API](https://laraveltuts.com/working-with-tmdb-api-in-laravel-9/)
+-   [Safely remove migration In Laravel](https://stackoverflow.com/questions/16871413/safely-remove-migration-in-laravel)
 
 ### Prerequisites
 
