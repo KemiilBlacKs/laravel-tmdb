@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     @vite('resources/css/app.css')
-    <title>MovieDB</title>
+    <title>{{ config('app.name', 'Laravel') }}</title>
 </head>
 
 <body class="font-sans text-white bg-gray-900">
@@ -26,7 +26,7 @@
                 </li> --}}
             </ul>
             <div class="mt-3 md:ml-4 md:mt-0">
-                <a href="">
+                <a href="{{ route('login') }}">
                     <svg class="transition duration-150 ease-in-out hover:text-red-500"
                         xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24">
                         <path fill="currentColor"

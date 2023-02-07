@@ -8,7 +8,8 @@ It works with Laravel 9, MySQL 8.0 and Docker.
 
 To make the front, I was inspired by the tutorial of :
 
--   [LaravelTuts](https://laraveltuts.com/working-with-tmdb-api-in-laravel-9/)
+-   [Getting started with Laravel 9 and the tmdb API](https://laraveltuts.com/working-with-tmdb-api-in-laravel-9/)
+-   [Safely remove migration In Laravel](https://stackoverflow.com/questions/16871413/safely-remove-migration-in-laravel)
 
 ### Prerequisites
 
@@ -62,3 +63,21 @@ I used the [TMDb API](https://developers.themoviedb.org/3/) to get the data of t
 
 I had some problems with the movie listings, some fields like 'title' are replaced by 'name' and 'release_date' by
 'first_air_date'. I put a condition on the view to fix this.
+
+For authentication, I used the [Jetstream]('https://jetstream.laravel.com/2.x/installation.html) package with livewire.
+
+## What I learned
+
+✅ How to use the Laravel 9 framework
+
+✅ How to use the php artisan command
+
+✅ How to use the Docker CLI commands
+
+✅ How to use the TMDb API
+
+✅ How to use the TailwindCSS package with Laravel
+
+✅ How to use the Jetstream package
+
+✅ How to use the migration command
