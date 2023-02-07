@@ -15,6 +15,7 @@ To make the front, I was inspired by the tutorial of :
 
 -   [Composer](https://getcomposer.org/download/)
 -   [Docker](https://docs.docker.com/get-docker/)
+-   [Run your Laravel app with docker-compose](https://cylab.be/blog/131/run-your-laravel-app-with-docker-compose)
 
 ## Installation
 
@@ -31,11 +32,18 @@ directly to launch my container.
 
 ## Launch
 
+Create your .env file using the .env-example file as a model.
+Make sure that on your .env file, the name of the database is laravel_tmdb.
+
+Very important for the data import script to work.
+
 To launch the project, go to the root of your project and mount your container with the command (You can use the `-d` option at the end to make it run in the background):
 
 ```shell
 docker-compose up
 ```
+
+This command will also allow to initialize the database with the right tables, and the right data to start using the project directly. A copy of the database will be imported to the root of the project in the backup_database folder. With this method, there is no need to import the database manually or to use migrations.
 
 Started the npm server to compile the correct CSS on the view:
 
@@ -44,6 +52,13 @@ npm run dev
 ```
 
 You can now access the project at the address [http://localhost:80](http://localhost:80)
+
+## Login to Back Office
+
+To connect to the back office, you can use this credentials :
+
+-   email : admin@test.fr
+-   password : Qa3hb5?@6nHH#m4n
 
 ## How I did it
 
@@ -73,6 +88,8 @@ For authentication, I used the [Jetstream]('https://jetstream.laravel.com/2.x/in
 ✅ How to use the php artisan command
 
 ✅ How to use the Docker CLI commands
+
+✅ How to initialize a project to have basic data with docker-compose
 
 ✅ How to use the TMDb API
 
