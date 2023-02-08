@@ -48,7 +48,7 @@ This command will also allow to initialize the database with the right tables, a
 Started the npm server to compile the correct CSS on the view:
 
 ```shell
-npm run dev
+npm install && npm run dev
 ```
 
 You can now access the project at the address [http://localhost:80](http://localhost:80)
